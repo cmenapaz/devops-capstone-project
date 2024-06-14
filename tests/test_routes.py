@@ -20,10 +20,10 @@ DATABASE_URI = os.getenv(
 
 BASE_URL = "/accounts"
 HTTPS_ENVIRON = {'wsgi.url_scheme': 'https'}
-'X-Frame-Options': 'SAMEORIGIN'
-'X-Content-Type-Options': 'nosniff'
-'Content-Security-Policy': 'default-src \'self\'; object-src \'none\''
-'Referrer-Policy': 'strict-origin-when-cross-origin'
+#'X-Frame-Options': 'SAMEORIGIN'
+#'X-Content-Type-Options': 'nosniff'
+#'Content-Security-Policy': 'default-src \'self\'; object-src \'none\''
+#'Referrer-Policy': 'strict-origin-when-cross-origin'
 
 ######################################################################
 #  T E S T   C A S E S
@@ -40,7 +40,7 @@ class TestAccountService(TestCase):
         app.logger.setLevel(logging.CRITICAL)
         init_db(app)
 
-    @classmethod
+    #@classmethod
 
     def setUpClass(cls):
         """Run once before all tests"""
